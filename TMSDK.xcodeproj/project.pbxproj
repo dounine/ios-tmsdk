@@ -12,7 +12,6 @@
 		21C2D5022927294700B9E83F /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2D5012927294700B9E83F /* Digest.swift */; };
 		21C2D5042927296000B9E83F /* SwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2D5032927296000B9E83F /* SwiftMD5.swift */; };
 		21C2D5062927297800B9E83F /* TMSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C2D5052927297800B9E83F /* TMSDK.swift */; };
-		85C27CDC292719FD000F571D /* SampleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 85C27CDB292719FD000F571D /* SampleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85C27CED29271AE6000F571D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C27CEC29271AE6000F571D /* AppDelegate.swift */; };
 		85C27CEF29271AE6000F571D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C27CEE29271AE6000F571D /* SceneDelegate.swift */; };
 		85C27CF129271AE6000F571D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C27CF029271AE6000F571D /* ViewController.swift */; };
@@ -50,7 +49,6 @@
 		21C2D5032927296000B9E83F /* SwiftMD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMD5.swift; sourceTree = "<group>"; };
 		21C2D5052927297800B9E83F /* TMSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMSDK.swift; sourceTree = "<group>"; };
 		85C27CD8292719FD000F571D /* TMSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TMSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85C27CDB292719FD000F571D /* SampleKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleKit.h; sourceTree = "<group>"; };
 		85C27CEA29271AE6000F571D /* TMSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C27CEC29271AE6000F571D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85C27CEE29271AE6000F571D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 		85C27CDA292719FD000F571D /* TMSDK */ = {
 			isa = PBXGroup;
 			children = (
-				85C27CDB292719FD000F571D /* SampleKit.h */,
 				21C2D5012927294700B9E83F /* Digest.swift */,
 				21C2D5032927296000B9E83F /* SwiftMD5.swift */,
 				21C2D5052927297800B9E83F /* TMSDK.swift */,
@@ -138,7 +135,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C27CDC292719FD000F571D /* SampleKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
