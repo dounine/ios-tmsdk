@@ -1,0 +1,4 @@
+framework module TMSDK {
+  header "TMSDK-Swift.h"
+  requires objc
+}
