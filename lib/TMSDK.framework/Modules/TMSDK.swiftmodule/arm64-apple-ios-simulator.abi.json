@@ -29,14 +29,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:5TMSDKAAV7versionSSvp",
-            "mangledName": "$s5TMSDKAAV7versionSSvp",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(py)version",
+            "mangledName": "$s5TMSDKAAC7versionSSvp",
             "moduleName": "TMSDK",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
               "SetterAccess",
-              "AccessControl"
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -53,10 +54,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:5TMSDKAAV7versionSSvg",
-                "mangledName": "$s5TMSDKAAV7versionSSvg",
+                "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)version",
+                "mangledName": "$s5TMSDKAAC7versionSSvg",
                 "moduleName": "TMSDK",
                 "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -74,13 +79,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:5TMSDKAAV9programIdSSvp",
-            "mangledName": "$s5TMSDKAAV9programIdSSvp",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(py)programId",
+            "mangledName": "$s5TMSDKAAC9programIdSSvp",
             "moduleName": "TMSDK",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "SetterAccess"
+              "SetterAccess",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -97,10 +104,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:5TMSDKAAV9programIdSSvg",
-                "mangledName": "$s5TMSDKAAV9programIdSSvg",
+                "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)programId",
+                "mangledName": "$s5TMSDKAAC9programIdSSvg",
                 "moduleName": "TMSDK",
                 "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -118,13 +129,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:5TMSDKAAV5appidSSvp",
-            "mangledName": "$s5TMSDKAAV5appidSSvp",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(py)appid",
+            "mangledName": "$s5TMSDKAAC5appidSSvp",
             "moduleName": "TMSDK",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "SetterAccess"
+              "SetterAccess",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -141,10 +154,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:5TMSDKAAV5appidSSvg",
-                "mangledName": "$s5TMSDKAAV5appidSSvg",
+                "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)appid",
+                "mangledName": "$s5TMSDKAAC5appidSSvg",
                 "moduleName": "TMSDK",
                 "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -162,13 +179,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:5TMSDKAAV7channelSSvp",
-            "mangledName": "$s5TMSDKAAV7channelSSvp",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(py)channel",
+            "mangledName": "$s5TMSDKAAC7channelSSvp",
             "moduleName": "TMSDK",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "SetterAccess"
+              "SetterAccess",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -185,34 +204,17 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:5TMSDKAAV7channelSSvg",
-                "mangledName": "$s5TMSDKAAV7channelSSvg",
+                "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)channel",
+                "mangledName": "$s5TMSDKAAC7channelSSvg",
                 "moduleName": "TMSDK",
                 "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "TMSDK",
-                "printedName": "TMSDK.TMSDK",
-                "usr": "s:5TMSDKAAV"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:5TMSDKAAVABycfc",
-            "mangledName": "$s5TMSDKAAVABycfc",
-            "moduleName": "TMSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
           },
           {
             "kind": "Function",
@@ -244,14 +246,16 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV6config9programId5appid7channelySS_S2StF",
-            "mangledName": "$s5TMSDKAAV6config9programId5appid7channelySS_S2StF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)configWithProgramId:appid:channel:",
+            "mangledName": "$s5TMSDKAAC6config9programId5appid7channelySS_S2StF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "configWithProgramId:appid:channel:",
             "declAttributes": [
-              "Mutating",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -280,9 +284,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV3md54dataSSSgSS_tF",
-            "mangledName": "$s5TMSDKAAV3md54dataSSSgSS_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)md5WithData:",
+            "mangledName": "$s5TMSDKAAC3md54dataSSSgSS_tF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "md5WithData:",
+            "declAttributes": [
+              "ObjC"
+            ],
             "funcSelfKind": "NonMutating"
           },
           {
@@ -304,52 +313,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV27getDictionaryFromJSONString10jsonStringSo12NSDictionaryCSS_tF",
-            "mangledName": "$s5TMSDKAAV27getDictionaryFromJSONString10jsonStringSo12NSDictionaryCSS_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)getDictionaryFromJSONStringWithJsonString:",
+            "mangledName": "$s5TMSDKAAC27getDictionaryFromJSONString10jsonStringSo12NSDictionaryCSS_tF",
             "moduleName": "TMSDK",
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "get",
-            "printedName": "get(callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.String) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.String) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
+            "isOpen": true,
+            "objc_name": "getDictionaryFromJSONStringWithJsonString:",
+            "declAttributes": [
+              "ObjC"
             ],
-            "declKind": "Func",
-            "usr": "s:5TMSDKAAV3get8callbackyySScSg_tF",
-            "mangledName": "$s5TMSDKAAV3get8callbackyySScSg_tF",
-            "moduleName": "TMSDK",
             "funcSelfKind": "NonMutating"
           },
           {
@@ -371,11 +342,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV4sign4dataSSSo12NSDictionaryC_tF",
-            "mangledName": "$s5TMSDKAAV4sign4dataSSSo12NSDictionaryC_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)signWithData:",
+            "mangledName": "$s5TMSDKAAC4sign4dataSSSo12NSDictionaryC_tF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "signWithData:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -404,11 +379,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV6online7open_id3ofpS2S_SStF",
-            "mangledName": "$s5TMSDKAAV6online7open_id3ofpS2S_SStF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)onlineWithOpen_id:ofp:",
+            "mangledName": "$s5TMSDKAAC6online7open_id3ofpS2S_SStF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "onlineWithOpen_id:ofp:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -467,11 +445,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV10createRole7open_id10trackingId08gameUserG08nickname4zone5level04vip_L0S2S_S6StF",
-            "mangledName": "$s5TMSDKAAV10createRole7open_id10trackingId08gameUserG08nickname4zone5level04vip_L0S2S_S6StF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)createRoleWithOpen_id:trackingId:gameUserId:nickname:zone:level:vip_level:",
+            "mangledName": "$s5TMSDKAAC10createRole7open_id10trackingId08gameUserG08nickname4zone5level04vip_L0S2S_S6StF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "createRoleWithOpen_id:trackingId:gameUserId:nickname:zone:level:vip_level:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -494,11 +475,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV14reportIdentify7open_idS2S_tF",
-            "mangledName": "$s5TMSDKAAV14reportIdentify7open_idS2S_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)reportIdentifyWithOpen_id:",
+            "mangledName": "$s5TMSDKAAC14reportIdentify7open_idS2S_tF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "reportIdentifyWithOpen_id:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -521,11 +505,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV13queryIdentify7open_idS2S_tF",
-            "mangledName": "$s5TMSDKAAV13queryIdentify7open_idS2S_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)queryIdentifyWithOpen_id:",
+            "mangledName": "$s5TMSDKAAC13queryIdentify7open_idS2S_tF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "queryIdentifyWithOpen_id:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -560,11 +547,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV8identify7open_id4name0D5_cardS2S_S2StF",
-            "mangledName": "$s5TMSDKAAV8identify7open_id4name0D5_cardS2S_S2StF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)identifyWithOpen_id:name:id_card:",
+            "mangledName": "$s5TMSDKAAC8identify7open_id4name0D5_cardS2S_S2StF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "identifyWithOpen_id:name:id_card:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -593,11 +583,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV5login5phone11verify_codeS2S_SStF",
-            "mangledName": "$s5TMSDKAAV5login5phone11verify_codeS2S_SStF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)loginWithPhone:verify_code:",
+            "mangledName": "$s5TMSDKAAC5login5phone11verify_codeS2S_SStF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "loginWithPhone:verify_code:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -620,11 +613,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV7captcha5phoneS2S_tF",
-            "mangledName": "$s5TMSDKAAV7captcha5phoneS2S_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)captchaWithPhone:",
+            "mangledName": "$s5TMSDKAAC7captcha5phoneS2S_tF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "captchaWithPhone:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -647,68 +643,109 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:5TMSDKAAV18stringToDictionary4dataSo12NSDictionaryCSS_tF",
-            "mangledName": "$s5TMSDKAAV18stringToDictionary4dataSo12NSDictionaryCSS_tF",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)stringToDictionaryWithData:",
+            "mangledName": "$s5TMSDKAAC18stringToDictionary4dataSo12NSDictionaryCSS_tF",
             "moduleName": "TMSDK",
+            "isOpen": true,
+            "objc_name": "stringToDictionaryWithData:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
-            "kind": "Function",
-            "name": "post",
-            "printedName": "post()",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
+                "name": "TMSDK",
+                "printedName": "TMSDK.TMSDK",
+                "usr": "c:@M@TMSDK@objc(cs)TMSDK"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:5TMSDKAAV4postyyF",
-            "mangledName": "$s5TMSDKAAV4postyyF",
+            "declKind": "Constructor",
+            "usr": "c:@M@TMSDK@objc(cs)TMSDK(im)init",
+            "mangledName": "$s5TMSDKAACABycfc",
             "moduleName": "TMSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
             "declAttributes": [
-              "AccessControl"
+              "Dynamic",
+              "ObjC",
+              "Override"
             ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "test",
-            "printedName": "test(name:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:5TMSDKAAV4test4nameS2S_tF",
-            "mangledName": "$s5TMSDKAAV4test4nameS2S_tF",
-            "moduleName": "TMSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
+            "init_kind": "Designated"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:5TMSDKAAV",
-        "mangledName": "$s5TMSDKAAV",
+        "declKind": "Class",
+        "usr": "c:@M@TMSDK@objc(cs)TMSDK",
+        "mangledName": "$s5TMSDKAAC",
         "moduleName": "TMSDK",
+        "isOpen": true,
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -1811,28 +1848,28 @@
     {
       "filePath": "\/Users\/lake\/dounine\/github\/swift\/3\/ios-tmsdk\/TMSDK\/TMSDK.swift",
       "kind": "StringLiteral",
-      "offset": 345,
+      "offset": 359,
       "length": 7,
       "value": "\"1.0.0\""
     },
     {
       "filePath": "\/Users\/lake\/dounine\/github\/swift\/3\/ios-tmsdk\/TMSDK\/TMSDK.swift",
       "kind": "StringLiteral",
-      "offset": 386,
+      "offset": 400,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lake\/dounine\/github\/swift\/3\/ios-tmsdk\/TMSDK\/TMSDK.swift",
       "kind": "StringLiteral",
-      "offset": 418,
+      "offset": 432,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/lake\/dounine\/github\/swift\/3\/ios-tmsdk\/TMSDK\/TMSDK.swift",
       "kind": "StringLiteral",
-      "offset": 452,
+      "offset": 466,
       "length": 2,
       "value": "\"\""
     }

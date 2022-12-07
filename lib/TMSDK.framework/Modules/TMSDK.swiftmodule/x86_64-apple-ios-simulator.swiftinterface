@@ -1,0 +1,45 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name TMSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+extension Swift.String {
+  public var md5: Swift.String {
+    get
+  }
+  public var md5Digest: [Swift.UInt8] {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class TMSDK : ObjectiveC.NSObject {
+  @objc public func config(programId: Swift.String, appid: Swift.String, channel: Swift.String)
+  @objc public func sign(data: Foundation.NSDictionary) -> Swift.String
+  @objc public func online(open_id: Swift.String, ofp: Swift.String) -> Swift.String
+  @objc public func createRole(open_id: Swift.String, trackingId: Swift.String, gameUserId: Swift.String, nickname: Swift.String, zone: Swift.String, level: Swift.String, vip_level: Swift.String) -> Swift.String
+  @objc public func reportIdentify(open_id: Swift.String) -> Swift.String
+  @objc public func queryIdentify(open_id: Swift.String) -> Swift.String
+  @objc public func identify(open_id: Swift.String, name: Swift.String, id_card: Swift.String) -> Swift.String
+  @objc public func login(phone: Swift.String, verify_code: Swift.String) -> Swift.String
+  @objc public func captcha(phone: Swift.String) -> Swift.String
+  @objc public func stringToDictionary(data: Swift.String) -> Foundation.NSDictionary
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct SwiftMD5 {
+  public func F(_ b: Swift.UInt32, _ c: Swift.UInt32, _ d: Swift.UInt32) -> Swift.UInt32
+  public func G(_ b: Swift.UInt32, _ c: Swift.UInt32, _ d: Swift.UInt32) -> Swift.UInt32
+  public func H(_ b: Swift.UInt32, _ c: Swift.UInt32, _ d: Swift.UInt32) -> Swift.UInt32
+  public func I(_ b: Swift.UInt32, _ c: Swift.UInt32, _ d: Swift.UInt32) -> Swift.UInt32
+  public func rotateLeft(_ x: Swift.UInt32, by: Swift.UInt32) -> Swift.UInt32
+  public func md5(_ bytes: [Swift.UInt8]) -> TMSDK.Digest
+  public func encodeMD5(digest: [Swift.UInt8]) -> Swift.String
+}
+public struct Digest {
+  public let digest: [Swift.UInt8]
+  public var checksum: Swift.String {
+    get
+  }
+}

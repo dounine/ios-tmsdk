@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "85C27CE929271AE6000F571D"
-               BuildableName = "SwiftProjectDemo.app"
-               BlueprintName = "SwiftProjectDemo"
+               BlueprintIdentifier = "217D8EF62940A0320078DF20"
+               BuildableName = "OcProjectDemo.app"
+               BlueprintName = "OcProjectDemo"
                ReferencedContainer = "container:TMSDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +28,28 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "217D8F102940A0340078DF20"
+               BuildableName = "OcProjectDemoTests.xctest"
+               BlueprintName = "OcProjectDemoTests"
+               ReferencedContainer = "container:TMSDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "217D8F1A2940A0350078DF20"
+               BuildableName = "OcProjectDemoUITests.xctest"
+               BlueprintName = "OcProjectDemoUITests"
+               ReferencedContainer = "container:TMSDK.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -44,9 +66,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "85C27CE929271AE6000F571D"
-            BuildableName = "SwiftProjectDemo.app"
-            BlueprintName = "SwiftProjectDemo"
+            BlueprintIdentifier = "217D8EF62940A0320078DF20"
+            BuildableName = "OcProjectDemo.app"
+            BlueprintName = "OcProjectDemo"
             ReferencedContainer = "container:TMSDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +83,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "85C27CE929271AE6000F571D"
-            BuildableName = "SwiftProjectDemo.app"
-            BlueprintName = "SwiftProjectDemo"
+            BlueprintIdentifier = "217D8EF62940A0320078DF20"
+            BuildableName = "OcProjectDemo.app"
+            BlueprintName = "OcProjectDemo"
             ReferencedContainer = "container:TMSDK.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

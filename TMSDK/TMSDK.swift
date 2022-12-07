@@ -12,26 +12,24 @@ extension String {
     }
 }
 
-public struct TMSDK {
-    public private(set) var version = "1.0.0"
+@objcMembers public class TMSDK:NSObject {
+    private(set) var version = "1.0.0"
     private(set) var programId = ""
     private(set) var appid = ""
     private(set) var channel = ""
-
-    public init(){
-    }
     
-    public mutating func config(programId:String,appid:String,channel:String){
+    
+    @objc public func config(programId:String,appid:String,channel:String){
         self.programId = programId
         self.appid = appid
         self.channel = channel
     }
     
-    func md5(data:String) ->String!{
+    @objc func md5(data:String) ->String!{
         return data.md5
     }
     
-    func getDictionaryFromJSONString(jsonString:String) ->NSDictionary{
+    @objc func getDictionaryFromJSONString(jsonString:String) ->NSDictionary{
         let jsonData:Data = jsonString.data(using: .utf8)!
         let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
         if dict != nil {
@@ -40,31 +38,31 @@ public struct TMSDK {
         return NSDictionary()
     }
    
-    func get(callback:((String)->())?){
-        let url:URL = URL(string:"https://catwechat.61week.com/api")!
-        let session = URLSession.shared
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        let task:URLSessionDataTask = session.dataTask(with: request as URLRequest) {(
-            data, response, error) in
-            
-            guard let data = data, let _:URLResponse = response, error == nil else {
-                print("error")
-                return
-            }
-            let dataString = String(data: data, encoding: String.Encoding.utf8)
-            callback?(dataString!)
-            let dict = self.getDictionaryFromJSONString(jsonString: dataString!)
-    //        print(dict)
-        }
-        task.resume()
-    }
-    public func sign(data:NSDictionary)->String{
+//    func get(callback:((String)->())?){
+//        let url:URL = URL(string:"https://catwechat.61week.com/api")!
+//        let session = URLSession.shared
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//        let task:URLSessionDataTask = session.dataTask(with: request as URLRequest) {(
+//            data, response, error) in
+//
+//            guard let data = data, let _:URLResponse = response, error == nil else {
+//                print("error")
+//                return
+//            }
+//            let dataString = String(data: data, encoding: String.Encoding.utf8)
+//            callback?(dataString!)
+//            let dict = self.getDictionaryFromJSONString(jsonString: dataString!)
+//    //        print(dict)
+//        }
+//        task.resume()
+//    }
+    @objc public func sign(data:NSDictionary)->String{
         let sortData = data.sorted(by: {"\($0.key)" < "\($1.key)"})
         let list = sortData.map{"\($0.key)=\($0.value)"}
         return "\(list.joined(separator: "&"))\(self.programId)".md5
     }
-    public func online(open_id:String,ofp:String)->String{
+    @objc public func online(open_id:String,ofp:String)->String{
         let jsonData:NSMutableDictionary = ["appid":self.appid,"openid":open_id,"uidfp":ofp]
         var json = NSData()
         do {
@@ -98,7 +96,7 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func createRole(
+    @objc public func createRole(
         open_id:String,
         trackingId:String,
         gameUserId:String,
@@ -153,7 +151,7 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func reportIdentify(open_id:String)->String{
+    @objc public func reportIdentify(open_id:String)->String{
         let timestamp = Int(Date().timeIntervalSince1970)
         let jsonData:NSMutableDictionary = ["open_id":open_id,"behavior":1,"timestamp":timestamp]
         let signId = self.sign(data: jsonData)
@@ -180,7 +178,7 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func queryIdentify(open_id:String)->String{
+    @objc public func queryIdentify(open_id:String)->String{
         let timestamp = Int(Date().timeIntervalSince1970)
         let jsonData:NSMutableDictionary = ["open_id":open_id,"timestamp":timestamp]
         let signId = self.sign(data: jsonData)
@@ -208,7 +206,7 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func identify(open_id:String,name:String,id_card:String)->String{
+    @objc public func identify(open_id:String,name:String,id_card:String)->String{
         let timestamp = Int(Date().timeIntervalSince1970)
         let jsonData:NSMutableDictionary = ["open_id":open_id,"name":name,"id_card":id_card,"timestamp":timestamp]
         let signId = self.sign(data: jsonData)
@@ -245,7 +243,7 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func login(phone:String,verify_code:String)->String{
+    @objc public func login(phone:String,verify_code:String)->String{
         let timestamp = Int(Date().timeIntervalSince1970)
         let jsonData:NSMutableDictionary = ["phone":phone,"verify_code":verify_code,"timestamp":timestamp]
         let signId = self.sign(data: jsonData)
@@ -283,7 +281,7 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func captcha(phone:String)->String{
+    @objc public func captcha(phone:String)->String{
         let timestamp = Int(Date().timeIntervalSince1970)
         let jsonData:NSMutableDictionary = ["phone":phone,"type":"LOGIN","timestamp":timestamp]
         let signId = self.sign(data: jsonData)
@@ -323,49 +321,49 @@ public struct TMSDK {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
-    public func stringToDictionary(data:String)->NSDictionary{
+    @objc public func stringToDictionary(data:String)->NSDictionary{
         return self.getDictionaryFromJSONString(jsonString: data)
     }
-    public func post(){
-        let jsonString = "{\"Data\":{\"xxx\":\"834\",\"xxx\":[{\"xxx\":[{\"xxx\":\"031019\",\"xxx\":\"ADD\",\"xxx\":\"9\"},{\"xxx\":\"5651G-06920ADBAA\",\"xxx\":\"ADD\",\"xxx\":\"6\"}],\"xxx\":\"xxx\",\"Counted\":true,\"xxx\":true,\"LineNum\":\"1\",\"xxx\":\"235\",\"Quantity\":\"15\"}],\"xxx\":\"\",\"Initials\":\"we\",\"xxx\":true},\"xxx\":\"\"}"
-        let dict = self.getDictionaryFromJSONString(jsonString: jsonString)
-        print(dict)
-        var  jsonData = NSData()
-        do {
-             jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) as NSData
-        } catch {
-            print(error.localizedDescription)
-        }
-        // 构建URL
-        let url:URL = URL(string: "https://catwechat.61week.com/api/hello")!
-        // session
-        let session = URLSession.shared
-        // request
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        // 设置Content-Length，非必须
-        request.setValue("\(jsonData.length)", forHTTPHeaderField: "Content-Length")
-        // 设置 Content-Type 为 json 类型
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        // POST    请求将 数据 放置到 请求体中
-        request.httpBody = jsonData as Data
-        // 发送请求
-        let task = session.dataTask(with: request as URLRequest) {(
-            data, response, error) in
-
-            guard let data = data, let _:URLResponse = response, error == nil else {
-                print("error")
-                return
-            }
-            // 返回值 utf8 转码
-            let dataString =  String(data: data, encoding: String.Encoding.utf8)
-            // 将 jsonString 转成字典
-            let dict = self.getDictionaryFromJSONString(jsonString: dataString!)
-            print(dict)
-        }
-        task.resume()
-    }
-    public func test(name:String)->String{
-        return "my name is \(name)"
-    }
+//    public func post(){
+//        let jsonString = "{\"Data\":{\"xxx\":\"834\",\"xxx\":[{\"xxx\":[{\"xxx\":\"031019\",\"xxx\":\"ADD\",\"xxx\":\"9\"},{\"xxx\":\"5651G-06920ADBAA\",\"xxx\":\"ADD\",\"xxx\":\"6\"}],\"xxx\":\"xxx\",\"Counted\":true,\"xxx\":true,\"LineNum\":\"1\",\"xxx\":\"235\",\"Quantity\":\"15\"}],\"xxx\":\"\",\"Initials\":\"we\",\"xxx\":true},\"xxx\":\"\"}"
+//        let dict = self.getDictionaryFromJSONString(jsonString: jsonString)
+//        print(dict)
+//        var  jsonData = NSData()
+//        do {
+//             jsonData = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) as NSData
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//        // 构建URL
+//        let url:URL = URL(string: "https://catwechat.61week.com/api/hello")!
+//        // session
+//        let session = URLSession.shared
+//        // request
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        // 设置Content-Length，非必须
+//        request.setValue("\(jsonData.length)", forHTTPHeaderField: "Content-Length")
+//        // 设置 Content-Type 为 json 类型
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        // POST    请求将 数据 放置到 请求体中
+//        request.httpBody = jsonData as Data
+//        // 发送请求
+//        let task = session.dataTask(with: request as URLRequest) {(
+//            data, response, error) in
+//
+//            guard let data = data, let _:URLResponse = response, error == nil else {
+//                print("error")
+//                return
+//            }
+//            // 返回值 utf8 转码
+//            let dataString =  String(data: data, encoding: String.Encoding.utf8)
+//            // 将 jsonString 转成字典
+//            let dict = self.getDictionaryFromJSONString(jsonString: dataString!)
+//            print(dict)
+//        }
+//        task.resume()
+//    }
+//    public func test(name:String)->String{
+//        return "my name is \(name)"
+//    }
 }
