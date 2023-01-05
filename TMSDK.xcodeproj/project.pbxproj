@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21627C80295C2CC90005F753 /* TestJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 21627C7F295C2CC90005F753 /* TestJSObject.m */; };
+		21627C81295D6C2D0005F753 /* TMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C27CD8292719FD000F571D /* TMSDK.framework */; };
+		21627C82295D6C2D0005F753 /* TMSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85C27CD8292719FD000F571D /* TMSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		217D8EFB2940A0330078DF20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217D8EFA2940A0330078DF20 /* AppDelegate.m */; };
 		217D8EFE2940A0330078DF20 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217D8EFD2940A0330078DF20 /* SceneDelegate.m */; };
 		217D8F012940A0330078DF20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217D8F002940A0330078DF20 /* ViewController.m */; };
@@ -28,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		21627C83295D6C2D0005F753 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85C27CCF292719FD000F571D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85C27CD7292719FD000F571D;
+			remoteInfo = TMSDK;
+		};
 		21C2D4FE292726AC00B9E83F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 85C27CCF292719FD000F571D /* Project object */;
@@ -38,6 +48,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		21627C85295D6C2E0005F753 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21627C82295D6C2D0005F753 /* TMSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C2D500292726AC00B9E83F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21627C7E295C29BE0005F753 /* TestJSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestJSObject.h; sourceTree = "<group>"; };
+		21627C7F295C2CC90005F753 /* TestJSObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestJSObject.m; sourceTree = "<group>"; };
 		217D8EF72940A0320078DF20 /* OcProjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OcProjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		217D8EF92940A0330078DF20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		217D8EFA2940A0330078DF20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21627C81295D6C2D0005F753 /* TMSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +142,8 @@
 				217D8F072940A0340078DF20 /* LaunchScreen.storyboard */,
 				217D8F0A2940A0340078DF20 /* Info.plist */,
 				217D8F0B2940A0340078DF20 /* main.m */,
+				21627C7E295C29BE0005F753 /* TestJSObject.h */,
+				21627C7F295C2CC90005F753 /* TestJSObject.m */,
 			);
 			path = OcProjectDemo;
 			sourceTree = "<group>";
@@ -194,10 +220,12 @@
 				217D8EF32940A0320078DF20 /* Sources */,
 				217D8EF42940A0320078DF20 /* Frameworks */,
 				217D8EF52940A0320078DF20 /* Resources */,
+				21627C85295D6C2E0005F753 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				21627C84295D6C2D0005F753 /* PBXTargetDependency */,
 			);
 			name = OcProjectDemo;
 			productName = OcProjectDemo;
@@ -319,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				217D8F012940A0330078DF20 /* ViewController.m in Sources */,
+				21627C80295C2CC90005F753 /* TestJSObject.m in Sources */,
 				217D8EFB2940A0330078DF20 /* AppDelegate.m in Sources */,
 				217D8F0C2940A0340078DF20 /* main.m in Sources */,
 				217D8EFE2940A0330078DF20 /* SceneDelegate.m in Sources */,
@@ -348,6 +377,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		21627C84295D6C2D0005F753 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85C27CD7292719FD000F571D /* TMSDK */;
+			targetProxy = 21627C83295D6C2D0005F753 /* PBXContainerItemProxy */;
+		};
 		21C2D4FF292726AC00B9E83F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85C27CD7292719FD000F571D /* TMSDK */;

@@ -96,6 +96,53 @@ extension String {
         _ = timeout.wait(timeout: DispatchTime.distantFuture)
         return returnData
     }
+    @objc public func createOrder(
+        open_id:String,
+        coin:String,
+        program_param:String,
+        goods_name:String,
+        zone:String,
+        game_uid:String,
+        game_nickname:String,
+        pay_type:String
+    )->String{
+        let timestamp = Int(Date().timeIntervalSince1970)
+        let jsonData:NSMutableDictionary = ["open_id":open_id,"coin":coin,"program_param":program_param,"goods_name":goods_name,"zone":zone,"game_uid":game_uid,"game_nickname":game_nickname,"pay_type":pay_type,"timestamp":timestamp]
+        let signId = self.sign(data: jsonData)
+        jsonData["sign"] = signId
+        var json = NSData()
+        do {
+            json = try JSONSerialization.data(withJSONObject: jsonData, options: .prettyPrinted) as NSData
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        let url:URL = URL(string: "https://api.kuaiyugo.com/api/payment/v1/programs/\(self.programId)/h5_orders")!
+        let session = URLSession.shared
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("\(json.length)", forHTTPHeaderField: "Content-Length")
+        request.setValue("IOS_SDK", forHTTPHeaderField: "from_sdk")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = json as Data
+        var returnData = ""
+        // 发送请求
+        let timeout = DispatchSemaphore(value:0)
+        let task = session.dataTask(with: request as URLRequest) {(
+            data, response, error) in
+
+            guard let data = data, let _:URLResponse = response, error == nil else {
+                print("error")
+                return
+            }
+            let dataString = String(data: data, encoding: String.Encoding.utf8)
+            returnData = dataString!
+            timeout.signal()
+        }
+        task.resume()
+        _ = timeout.wait(timeout: DispatchTime.distantFuture)
+        return returnData
+    }
     @objc public func createRole(
         open_id:String,
         trackingId:String,
